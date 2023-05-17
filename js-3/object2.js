@@ -12,7 +12,7 @@ console.log(persona);
 function presentacion (objeto) {
     let v = Object.values(persona);
     v.splice(3,3);
-    return console.log(v.join(' '));
+    return (v.join(' '));
 }
 
 //Se crea la variable mensaje para almacenar el valor de la funcion presentacion
@@ -24,9 +24,8 @@ console.log(mensaje) //undefined
 //Se agrega la propiedad hobbies
 persona.hobbies = ['peliculas', 'bicicleta', 'leer', 'salir'];
 
-//Ciclo para imprimir los valores de la llave hobbies
-let acum = '';
+//Ciclo para imprimir cada uno de los valores de la llave hobbies
 for (let i = 0; i < persona.hobbies.length; i++) {
-    acum += ' ' + persona.hobbies[i];
+    acum = persona.hobbies[i];
+    console.log(acum);
 }
-console.log(acum);
